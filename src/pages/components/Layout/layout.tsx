@@ -9,7 +9,6 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, meta }: LayoutProps) => {
-  console.log(styles, "sss");
   const { title, description, icon } = meta;
   return (
     <>
@@ -19,7 +18,7 @@ const Layout = ({ children, meta }: LayoutProps) => {
         <link rel="stylesheet" href={icon || "/public/favicon.ico"} />
       </Head>
       <Header />
-      <main className={styles.main}>{children}</main>
+      {children}
       <Footer />
     </>
   );
